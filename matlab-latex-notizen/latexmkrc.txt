@@ -1,0 +1,43 @@
+# 4: lualatex, as specified by the $lualatex variable (best)
+$pdf_mode = 4;
+$warnings_as_errors = 0;
+$show_time = 1;
+$max_repeat=7;
+
+# --shell-escape option (execution of code outside of latex) is required for the
+#'svg' package.
+# It converts raw SVG files to the PDF+PDF_TEX combo using InkScape.
+#
+# SyncTeX allows to jump between source (code) and output (PDF) in IDEs with support
+# (many have it). A value of `1` is enabled (gzipped), `-1` is enabled but uncompressed,
+# `0` is off.
+# Testing in VSCode w/ LaTeX Workshop only worked for the compressed version.
+# Adjust this as needed. Of course, only relevant for local use, no effect on a remote
+# CI pipeline (except for slower compilation, probably).
+#
+# %O and %S will forward Options and the Source file, respectively, given to latexmk.
+#
+# `set_tex_cmds` applies to all *latex commands (latex, xelatex, lualatex, ...), so
+# no need to specify these each. This allows to simply change `$pdf_mode` to get a
+# different engine. Check if this works with `latexmk --commands`.
+# file-line-error writes out the concrete file line in which the error occured.
+
+set_tex_cmds("--shell-escape --interaction=nonstopmode --synctex=1 --file-line-error %O %S");
+
+# option 2 is same as 1 (run biber when necessary), but also deletes the
+# regeneratable bbl-file in a clenaup (`latexmk -c`). Do not use if original
+# bib file is not available!
+$bibtex_use = 2;  # default: 1
+
+# Change default `biber` call, help catch errors faster/clearer. See
+# https://web.archive.org/web/20200526101657/https://www.semipol.de/2018/06/12/latex-best-practices.html#database-entries
+$biber = "biber --validate-datamodel %O %S";
+
+# Let latexmk know about generated files, so they can be used to detect if a
+# rerun is required, or be deleted in a cleanup.
+# loe: List of Examples (KOMAScript)
+# lol: List of Listings (`listings` and `minted` packages)
+# run.xml: biber runs
+# glg: glossaries log
+# glstex: generated from glossaries-extra
+push @generated_exts, 'loe', 'lol', 'lor', 'run.xml', 'glg', 'glstex';

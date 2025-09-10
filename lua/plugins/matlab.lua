@@ -5,11 +5,11 @@ vim.lsp.config["matlab_ls"] = {
   filetypes = { "matlab" },
   settings = {
     MATLAB = {
-      installPath = "usr/local/MATLAB/R2025a",
+      installPath = "/opt/MATLAB/R2025a/bin/",
       telemetry = false,
     },
   },
 }
 vim.lsp.enable("matlab_ls")
-vim.env.PATH = vim.env.PATH .. ":/usr/local/MATLAB/R2025a/bin/"
+vim.env.PATH = vim.env.PATH .. ":/opt/MATLAB/R2025a/bin/"
 return {}
