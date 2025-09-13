@@ -1,15 +1,17 @@
-vim.lsp.config["ltex_plus"] = {
+vim.lsp.config("ltex_plus", {
   -- Command and arguments to start the server.
   cmd = { "ltex-ls-plus" },
   -- Filetypes to automatically attach to.
+  on_attach = on_attach,
+  capabilities = capabilities,
   filetypes = { "tex" },
   settings = {
     ltex = {
-      enabled = { "bibtex", "latex" },
-      language = { "de-DE" },
+      enabled = { "tex", "bibtex", "latex" },
+      language = "de-DE",
     },
   },
-}
+})
 vim.lsp.enable("ltex_plus")
 vim.env.PATH = vim.env.PATH .. ":/usr/local/texlive/2025/bin/x86_64-linux"
 return {
