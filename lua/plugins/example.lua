@@ -95,6 +95,19 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        matlab_ls = {
+          cmd = { "matlab-language-server", "--stdio" },
+          filetypes = { "matlab" },
+          settings = {
+            MATLAB = {
+              installPath = "/opt/MATLAB/R2025a/",
+              indexWorkspace = true,
+              matlabConnectionTiming = "onStart",
+              telemetry = false,
+            },
+          },
+          single_file_support = true,
+        },
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
