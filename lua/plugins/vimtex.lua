@@ -3,9 +3,9 @@ vim.lsp.config["ltex_plus"] = {
   cmd = { "ltex-ls-plus" },
   -- Filetypes to automatically attach to.
   filetypes = { "tex" },
-  ltex = {
-    settings = {
-      enabled = true,
+  settings = {
+    ltex = {
+      enabled = { "bibtex", "latex" },
       language = { "de-DE" },
     },
   },
