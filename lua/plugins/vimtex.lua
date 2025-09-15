@@ -7,9 +7,9 @@ vim.lsp.config("ltex_plus", {
   filetypes = { "tex" },
   settings = {
     ltex = {
-      enabled = { "tex", "bibtex", "latex" },
+      enabled = { "tex", "bibtex", "latex", "mail" },
       language = "de-DE",
-      additionalLanguages = { "en-US" },
+      additionalLanguages = "en-US",
     },
   },
 })
