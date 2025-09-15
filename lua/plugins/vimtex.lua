@@ -11,7 +11,7 @@ vim.lsp.config("ltex_plus", {
       completionEnabled = true,
       enabled = { "tex", "bibtex", "latex", "mail" },
       language = "de-DE",
-      dictionary = { "de-DE": [":~/latex/worterbuchdeutsch.txt"]},
+      dictionary =  "de-DE": [":~/latex/worterbuchdeutsch.txt"],
       additionalLanguages = "en-US",
     },
   },
