@@ -1,6 +1,6 @@
 {
-    "Figure": {
-        "prefix": "figure",
+    "Figure-eric": {
+        "prefix": "figure eric",
         "body": [
             "\\begin{figure}[htbp!]",
             "\t\\begin{center}",
@@ -10,7 +10,7 @@
             "\\end{figure}",
             "$0"
         ],
-        "description": "Add a figure"
+        "description": "Figure mit voller Breitseite"
     },
     "lvcode-task": {
         "prefix": "lvcode-task",
@@ -28,8 +28,14 @@
         "description": "inline code bool"
     },
     "lvcode-blau": {
-        "prefix": "lvcode-blaun",
+        "prefix": "lvcode-blau",
         "body": ["\\textcolor{lvfarbeblau}{\\mintinline{c}{$1}}"],
         "description": "inline code blau"
+    },
+    "lvcode-string": {
+        "prefix": "lvcode-string",
+        "body": ["\\textcolor{lvfarbestring}{\\mintinline{c}{$1}}"],
+        "description": "inline code string"
     }
 }
+
