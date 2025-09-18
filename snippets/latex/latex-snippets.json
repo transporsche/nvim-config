@@ -1,6 +1,6 @@
 {
     "Figure-eric": {
-        "prefix": "figure eric",
+        "prefix": "_figure-eric",
         "body": [
             "\\begin{figure}[htbp!]",
             "\t\\begin{center}",
