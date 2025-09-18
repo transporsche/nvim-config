@@ -1,3 +1,4 @@
+-- lsp config für ltex-ls-plus
 vim.lsp.config("ltex_plus", {
   -- Command and arguments to start the server.
   cmd = { "ltex-ls-plus" },
@@ -16,6 +17,8 @@ vim.lsp.config("ltex_plus", {
     },
   },
 })
+
+-- LSP einschalten
 vim.lsp.enable("ltex_plus")
 vim.env.PATH = vim.env.PATH .. ":/usr/local/texlive/2025/bin/x86_64-linux"
 return {
@@ -27,4 +30,13 @@ return {
     vim.g.vimtex_view_method = "zathura"
     vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull" }
   end,
+  "saghen/blink.cmp",
+  opts = {
+    snippets = {
+      -- Dein lokaler Ordner ist default, aber du kannst paths explizit setzen
+      paths = { vim.fn.stdpath("config") .. "/snippets" },
+    },
+    -- Optional: Friendly-Snippets laden, aber LaTeX überspringen (da du deine eigene hast)
+    keymap = { preset = "default" }, -- Standard-Keymaps für Tab-Expansion
+  },
 }
