@@ -10,7 +10,7 @@ vim.lsp.config("ltex_plus", {
     ltex = {
       checkFrequency = "edit",
       completionEnabled = true,
-      enabled = { "tex", "bibtex", "latex", "mail" },
+      enabled = { "bibtex", "latex", "mail" },
       language = "de-DE",
       --      dictionary =  "de-DE": [":~/latex/worterbuchdeutsch.txt"],
       --      additionalLanguages = "en-US",
@@ -30,6 +30,12 @@ return {
     -- VimTeX configuration goes here, e.g.
     vim.g.vimtex_view_method = "zathura"
     vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull" }
+    vim.api.nvim_create_autocmd({ "FileType" }, {
+      pattern = "tex",
+      callback = function()
+        vim.bo.filetype = "latex"
+      end,
+    })
   end,
 
   "saghen/blink.cmp",
