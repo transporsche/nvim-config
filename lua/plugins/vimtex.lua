@@ -49,5 +49,6 @@ return {
     },
     -- Optional: Friendly-Snippets laden, aber LaTeX überspringen (da du deine eigene hast)
     keymap = { preset = "default" }, -- Standard-Keymaps für Tab-Expansion
+    debug = true,
   },
 }

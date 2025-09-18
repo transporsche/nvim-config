@@ -31,5 +31,5 @@
         "prefix": "lvcode-blaun",
         "body": ["\\textcolor{lvfarbeblau}{\\mintinline{c}{$1}}"],
         "description": "inline code blau"
-    },
+    }
 }

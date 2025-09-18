@@ -2,7 +2,7 @@
   "name": "my-latex-snippets",
   "contributes": {
     "snippets": [
-      { "language": ["latex"], "path": "./latex-snippets.json" }
+      { "language": ["latex", "tex"], "path": "./latex/latex-snippets.json" }
     ]
   }
 }
