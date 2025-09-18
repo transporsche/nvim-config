@@ -1,0 +1,33 @@
+    "Figure": {
+        "prefix": "figure",
+        "body": [
+            "\\begin{figure}[htbp!]",
+            "\t\\begin{center}",
+            "\t\t\\includegraphics[width=\\textwidth]{$1}",
+            "\t\\end{center}",
+            "\t\\caption{$3}\\label{fig:$4}",
+            "\\end{figure}",
+            "$0"
+        ],
+        "description": "Add a figure"
+    },
+    "lvcode-task": {
+        "prefix": "lvcode-task",
+        "body": ["\\textcolor{lvfarbetask}{\\mintinline{c}{$1}}"],
+        "description": "inline code task"
+    },
+    "lvcode-double": {
+        "prefix": "lvcode-double",
+        "body": ["\\textcolor{lvfarbedouble}{\\mintinline{c}{$1}}"],
+        "description": "inline code double"
+    },
+    "lvcode-bool": {
+        "prefix": "lvcode-bool",
+        "body": ["\\textcolor{lvfarbebool}{\\mintinline{c}{$1}}"],
+        "description": "inline code bool"
+    },
+    "lvcode-blau": {
+        "prefix": "lvcode-blaun",
+        "body": ["\\textcolor{lvfarbeblau}{\\mintinline{c}{$1}}"],
+        "description": "inline code blau"
+    },
