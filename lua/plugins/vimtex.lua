@@ -33,6 +33,9 @@ return {
   end,
 
   "saghen/blink.cmp",
+  dependencies = {
+    "rafamadriz/friendly-snippets", -- Lädt friendly-snippets für andere Sprachen
+  },
   opts = {
     snippets = {
       -- Dein lokaler Ordner ist default, aber du kannst paths explizit setzen
