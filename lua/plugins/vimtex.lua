@@ -20,6 +20,7 @@ vim.lsp.config("ltex_plus", {
 
 -- LSP einschalten
 vim.lsp.enable("ltex_plus")
+-- TexLive Path für nvim startklar  machen
 vim.env.PATH = vim.env.PATH .. ":/usr/local/texlive/2025/bin/x86_64-linux"
 return {
   "lervag/vimtex",
@@ -30,6 +31,7 @@ return {
     vim.g.vimtex_view_method = "zathura"
     vim.g.vimtex_quickfix_ignore_filters = { "Underfull", "Overfull" }
   end,
+
   "saghen/blink.cmp",
   opts = {
     snippets = {
