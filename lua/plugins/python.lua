@@ -1,3 +1,3 @@
-{
+return {
   -- Manim oder so
 }
