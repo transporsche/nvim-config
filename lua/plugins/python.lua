@@ -1,0 +1,3 @@
+{
+  -- Manim oder so
+}
