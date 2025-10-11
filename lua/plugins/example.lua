@@ -200,7 +200,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ui = {
-        border = "single",
+        border = "rounded",
         --size = { width = 0.8, heigth = 0.8 },
       },
       ensure_installed = {
