@@ -19,6 +19,10 @@ require("conform").setup({
   },
 })
 
+require("lint").linters_by_ft = {
+  python = { "ruff" },
+}
+
 require("lspconfig").pyright.setup({
   settings = {
     pyright = {
